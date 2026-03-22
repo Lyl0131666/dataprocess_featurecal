@@ -1,6 +1,6 @@
-# dataprocess_featurecal
+# Data process and feature cal
 
-# JJG 地震数据预处理流程说明
+# 地震数据预处理流程说明（特征计算及模型调用）
 
 本项目包含两步主要的数据预处理流程，旨在将原始的台站数据整理、分量分类，并最终标准化命名为 `Network.Station.Channel.Year.JDay.mseed` 格式。
 
