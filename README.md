@@ -281,24 +281,4 @@ python run_local.py
 > **⚠️ 注意：**
 > 如果遇到 `ImportError`，请确保文件夹中包含 `cal_TypeA_TypeB.py`, `cal_TypeB_network.py` 和 `merge_single_julday.py`，且文件名无误。
 
----
 
-### 📊 处理流程图
-
-```mermaid
-graph TD
-    A[Start: run_local.py] --> B{Step 1: Loop Stations}
-    B --> C[cal_TypeA_TypeB.py]
-    C -->|Output| D[Raw .npy & Feature .txt]
-    
-    D --> E{Step 2: Multiple Stations?}
-    E -- Yes --> F[cal_TypeB_network.py]
-    E -- No --> G[Skip Network Features]
-    F -->|Calculate| H[Cross-Correlation / Coherence]
-    
-    H --> I{Step 3: Merge Data}
-    G --> I
-    I --> J[merge_single_julday.py]
-    J --> K[Final Feature Dataset]
-
-```
